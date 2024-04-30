@@ -17,3 +17,6 @@ function perro() {
     alert("Bueno ta bien, ¿quieres que traiga pala para destapar el cadaver?");
   }
 }
+
+saludar();
+perro();
