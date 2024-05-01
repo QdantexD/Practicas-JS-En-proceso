@@ -11,12 +11,8 @@ class Animal {
     document.write(this.informacion + "<br>");
   }
 
-  ladrar() {
-    if (this.especie.toLowerCase() === "perro") {
-      document.write("¡Guau, guau!" + "<br>");
-    } else {
-      document.write(`No puede ladrar, ya que es un ${this.especie}.` + "<br>");
-    }
+  hacerSonido() {
+    document.write("Este animal hace un sonido indefinido." + "<br>");
   }
 }
 
@@ -24,6 +20,14 @@ class Perro extends Animal {
   constructor(edad, color, raza) {
     super("perro", edad, color);
     this.raza = raza;
+  }
+
+  verInformacion() {
+    document.write(`${this.informacion}. Además, la raza es ${this.raza}.<br>`);
+  }
+
+  hacerSonido() {
+    document.write("¡Guau, guau!" + "<br>");
   }
 }
 
@@ -35,10 +39,10 @@ let raton = new Animal("ratón", 6, "blanco");
 
 // Llamar a los métodos
 perro1.verInformacion();
-perro1.ladrar();
+perro1.hacerSonido();
 perro2.verInformacion();
-perro2.ladrar();
+perro2.hacerSonido();
 gato.verInformacion();
-gato.ladrar();
+gato.hacerSonido();
 raton.verInformacion();
-raton.ladrar();
+raton.hacerSonido();
