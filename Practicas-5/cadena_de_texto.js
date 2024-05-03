@@ -19,4 +19,4 @@ document.write(resultado6 + "<br>");
 document.write(resultado7 + "<br>");
 document.write(resultado8.length + "<br>"); //Aqui puse el length para que puedan imprimir, claro con document.write
 
-// 5:42:45 / 10:00:40
+// 5:42:45 / 10:00:39
