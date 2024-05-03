@@ -1,4 +1,4 @@
-// Todo optimizado
+// Todo optimizado, pero con algunos cambios para ver que tal es uh
 class Animal {
   constructor(especie, edad, color) {
     this.especie = especie;
@@ -19,15 +19,19 @@ class Animal {
 class Perro extends Animal {
   constructor(edad, color, raza) {
     super("perro", edad, color);
-    this.raza = raza;
+    this.raza = null;
   }
 
   verInformacion() {
     document.write(`${this.informacion}. Además, la raza es ${this.raza}.<br>`);
   }
 
-  hacerSonido() {
-    document.write("¡Guau, guau!" + "<br>");
+  set modificarRaza(newName) {
+    this.raza = newName;
+  }
+
+  get getRaza() {
+    return this.raza;
   }
 }
 
@@ -38,11 +42,8 @@ const gato = new Animal("gato", 5, "negro");
 const raton = new Animal("ratón", 6, "blanco");
 
 // Llamar a los métodos
+perro1.modificarRaza = "Pedro";
 perro1.verInformacion();
 perro1.hacerSonido();
-perro2.verInformacion();
-perro2.hacerSonido();
-gato.verInformacion();
-gato.hacerSonido();
-raton.verInformacion();
-raton.hacerSonido();
+document.write(perro1.getRaza);
+document.write(perro1.raza);
